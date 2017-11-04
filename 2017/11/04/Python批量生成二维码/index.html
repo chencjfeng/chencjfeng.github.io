@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Hello World｜chenJF&#39;s blog
+        Python批量生成二维码｜chenJF&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://chenJF.github.io/2017/11/03/hello-world/">
+    <link rel="canonical" href="http://chenJF.github.io/2017/11/04/Python批量生成二维码/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -153,15 +153,20 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Hello World</h1>
+                    <h1>Python批量生成二维码</h1>
+                    
+                    <h2 class="subheading">利用Python2.7对批量url快速生成指定大小二维码图片</h2>
                     
                     <span class="meta">
-                         作者 chen_JF
+                         作者 chenJF
                         <span>
-                          日期 2017-11-03
+                          日期 2017-11-04
                          </span>
                     </span>
                     <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Python"
+                           title="Python">Python</a>
                         
                     </div>
                 </div>
@@ -170,7 +175,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Hello World
+            Python批量生成二维码
         </span>
     </div>
 </header>
@@ -181,21 +186,57 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                <h1 id="Python2-7-批量生成二维"><a href="#Python2-7-批量生成二维" class="headerlink" title="Python2.7 批量生成二维"></a>Python2.7 批量生成二维</h1><h2 id="导语："><a href="#导语：" class="headerlink" title="导语："></a>导语：</h2><blockquote>
+<p>本文针对mac电脑利用Python2.7脚本批量生成二维码，由于Python生成二维码利用了qrcode和image库，需要先用pip安装这两个库。这里顺便说了下pip的安装。</p>
+</blockquote>
+<h3 id="1-pip的安装"><a href="#1-pip的安装" class="headerlink" title="1.pip的安装"></a>1.pip的安装</h3><ul>
+<li><p>用命令行安装pip</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo easy_install pip</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查是否安装成功，只要不是not found pip，则安装成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip help</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h3 id="2-安装qrcode和image库"><a href="#2-安装qrcode和image库" class="headerlink" title="2.安装qrcode和image库"></a>2.安装qrcode和image库</h3><ul>
+<li><p>安装命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#安装失败可以加sudo安装</div><div class="line">pip install qrcode</div><div class="line">pip install image</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查是否安装成功,安装成功会有相应的版本信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip show qrcode</div><div class="line">pip show image</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装成功显示界面信息</p>
+</li>
+<li><p><img src="http://upload-images.jianshu.io/upload_images/4970496-ce568913bd5e15a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="python-qrcode.png"><br><br></p>
+<h3 id="3-示例代码"><a href="#3-示例代码" class="headerlink" title="3.示例代码"></a>3.示例代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># 导入qrcode库</div><div class="line">import qrcode</div><div class="line"></div><div class="line">#生成一张二维码图片，url二维码的内容，name保存二维码图片的名字</div><div class="line">def createOneQR(url,name):</div><div class="line">qr=qrcode.QRCode(version = 2,</div><div class="line">error_correction = qrcode.constants.ERROR_CORRECT_L, #容错样式</div><div class="line">box_size=10,   #每个格子的像素</div><div class="line">border=1)      #边框宽度</div><div class="line">qr.add_data(url)</div><div class="line">qr.make(fit=True)</div><div class="line">img = qr.make_image()</div><div class="line">img.resize((140, 140)).save(name)   #保存为140*140的图片</div><div class="line"></div><div class="line"></div><div class="line">#根据文档批量生成二维码</div><div class="line">def getQR():</div><div class="line">num = 0</div><div class="line">#遍历文档每行内容生成二维码</div><div class="line">for line in open(&quot;license-for-card.txt&quot;):</div><div class="line">imageName = &quot;license&quot;+str(num)+&quot;.png&quot;</div><div class="line">createOneQR(line,imageName)</div><div class="line">num += 1</div><div class="line"></div><div class="line">getQR()</div></pre></td></tr></table></figure>
+</li>
+<li><p>参数 version 表示生成二维码的尺寸大小，取值范围是 1 至 40，最小尺寸 1 会生成 21 <em> 21 的二维码，version 每增加 1，生成的二维码就会添加 4 尺寸，例如 version 是 2，则生成 25 </em> 25 的二维码。</p>
+</li>
+<li><p>参数 error_correction 指定二维码的容错系数，分别有以下4个系数：</p>
+</li>
+<li>ERROR_CORRECT_L: 7%的字码可被容错</li>
+<li>ERROR_CORRECT_M: 15%的字码可被容错</li>
+<li>ERROR_CORRECT_Q: 25%的字码可被容错</li>
+<li>ERROR_CORRECT_H: 30%的字码可被容错</li>
+<li>参数 box_size 表示二维码里每个格子的像素大小。</li>
+<li>参数 border 表示边框的格子厚度是多少（默认是4）。</li>
+</ul>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
+                    <li class="previous">
+                        <a href="/2017/11/04/git-pull冲突解决/" data-toggle="tooltip" data-placement="top"
+                           title="git pull冲突解决">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/11/04/软件设计师考点内容-一/" data-toggle="tooltip" data-placement="top"
+                           title="软件设计师考点内容(一)">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -210,7 +251,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python2-7-批量生成二维"><span class="toc-text">Python2.7 批量生成二维</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#导语："><span class="toc-text">导语：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pip的安装"><span class="toc-text">1.pip的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装qrcode和image库"><span class="toc-text">2.安装qrcode和image库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-示例代码"><span class="toc-text">3.示例代码</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -231,6 +272,9 @@
                         <a href="/tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Python"
+                           title="Python">Python</a>
                         
                     </div>
                 </section>
