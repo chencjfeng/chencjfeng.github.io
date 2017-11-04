@@ -2,7 +2,8 @@
 title: Python批量生成二维码
 date: 2017-11-04 14:54:31
 author: "chenJF"
-tags: Python
+tags:
+    - Python
 categories: Python
 ---
 # Python2.7 批量生成二维
