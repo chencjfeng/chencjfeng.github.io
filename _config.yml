@@ -118,20 +118,6 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
-## Plugins: https://hexo.io/plugins/
-Plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-
-#Feed Atom
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-
-#sitemap
-sitemap:
-  path: sitemap.xml
 
 
 markdown:
@@ -146,6 +132,8 @@ markdown:
 ## Themes: https://hexo.io/themes/
 theme: Anisina
 
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 #部署到git上
@@ -153,6 +141,8 @@ deploy:
   type: git
   repo: https://github.com/chencjfeng/chencjfeng.github.io.git
   branch: master
+
+
 
 # 导航栏
 menu:
