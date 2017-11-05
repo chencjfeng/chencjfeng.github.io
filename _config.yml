@@ -147,7 +147,7 @@ deploy:
 # 导航栏
 menu:
   home: /
-  categories: /categories
+  archives: /archives
   tags: /tags
 
 
@@ -173,8 +173,13 @@ search:
 
 # archive page title 
 archive:
-    title: archives
+    title: 归档
     description: 可以根据归档日期检索所有文件
+
+# archive page title 
+tags:
+    title: 标签
+    description: 可以根据标签检索所有文件
 
 
 

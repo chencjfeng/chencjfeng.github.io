@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="陈剑锋在 Github 上的个人博客">
     <meta name="keyword" content="">
-    <!---->
     <meta name="theme-color" content="#600090">
     <meta name="msapplication-navbutton-color" content="#600090">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -81,7 +80,7 @@
                         
 							
                         <li>
-                            <a href="/categories/">分类</a>
+                            <a href="/archives/">归档</a>
                         </li>
 							
 						
@@ -114,7 +113,6 @@
     var $toggle = document.querySelector('.navbar-toggle');
     var $navbar = document.querySelector('#huxblog_navbar');
     var $collapse = document.querySelector('.navbar-collapse');
-
     $toggle.addEventListener('click', handleMagic)
     function handleMagic(e){
         if ($navbar.className.indexOf('in') > 0) {
@@ -134,151 +132,102 @@
         }
     }
 </script>
-
 <!-- Main Content -->
-
+<style>
+    .intro-header .site-heading {
+        margin: 50px;
+    }
+    
+    header.intro-header {
+        background-image: url('/images/blog-bg-black-run.jpg')
+    }
+    
+</style>
 
 <!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
                 <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src="/images/header.jpg"/>
-                        <h5><a href="/about/">chen_JF</a></h5>
-                        <p>Stay Hungry Stay Foolish</p>
-                    </div>
+                    <h1>归档</h1>
+                    <span class="subheading">可以根据归档日期检索所有文件</span>
                 </div>
             </div>
-        </header>
+        </div>
     </div>
-</div>
+</header>
+
 <!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
+<div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
-
-
-
-<div class="post-preview "
-     style="background-image: url('/images/blog-bg-black-run.jpg')">
-    <a href="/2017/11/04/软件设计师考点内容-一/">
-        <h2 class="post-title">
-            软件设计师考点内容(一)
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-11-04
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                软件设计师考点内容分析1、CPU构成
-程序计数器(PC)：存放执行指令的地方，计算之前要用到
-累加器(AC)：暂时存放算数逻辑运算部件ALU运算的结果信息
-指令寄存器(IR)：保存当前正在执行的一条指令
-地址寄存器(AR)：保存当前CPU所要访问的内存单元的地址
-
-2、DMA(Direct Me..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
-    
-    
-</ul>
-
-
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <img src="/images/header.jpg"/>
-                    
-                    <h5><a href="/about/">chen_JF</a></h5>
-                    
-                    <p>Stay Hungry Stay Foolish</p>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <!-- archive list -->
+            
+				
+				
+				
+					
+					
+					<div class="archive archive-year" data-date="2017">
+						<h2 class="archive-title">
+						<span class="fa fa-archive">
+							<a href="/archives/2017">2017</a>
+						</span>
+						</h2>
+				
+				
+					
+					
+					<div class="archive archive-month" data-date="201711">
+						<h3 class="archive-title">
+							<a href="/archives/2017/11">11</a>
+						</h3>
+				
+				<div class="one-tag-list">
+                <div class="post-preview">
+                    <a href="/2017/11/04/git-pull冲突解决/">
+                        <h4 class="post-title">
+                            git pull冲突解决
+                        </h4>
                         
-                        
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="http://weibo.com/ChenJF-X贱">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-
-                        
-                        <li>
-                            <a target="_blank" href="https://github.com/chencjfeng">
-                                        <span class="fa-stack fa-lg">
-                                            <i class="fa fa-circle fa-stack-2x"></i>
-                                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                        </span>
-                            </a>
-                        </li>
-                        
-
-                        
-
-                        
-                    </ul>
-
+                    </a>
                 </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
+				<hr>
+				</div>
             
-            <section>
-                <div class="tags">
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+				
+				
+				
+				
+				<div class="one-tag-list">
+                <div class="post-preview">
+                    <a href="/2017/11/04/Python批量生成二维码/">
+                        <h4 class="post-title">
+                            Python批量生成二维码
+                        </h4>
+                        
+                    </a>
                 </div>
-            </section>
+				<hr>
+				</div>
             
-
+				
+				
+				
+				
+				<div class="one-tag-list">
+                <div class="post-preview">
+                    <a href="/2017/11/04/软件设计师考点内容-一/">
+                        <h4 class="post-title">
+                            软件设计师考点内容(一)
+                        </h4>
+                        
+                    </a>
+                </div>
+				<hr>
+				</div>
             
-
         </div>
     </div>
 </div>
@@ -291,11 +240,11 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <br>
                 <ul class="list-inline text-center">
-                    
-                    
-                    
+                
+                
+                
 
-                    
+                
                     <li>
                         <a target="_blank" href="http://weibo.com/ChenJF-X贱">
                             <span class="fa-stack fa-lg">
@@ -304,29 +253,32 @@
                             </span>
                         </a>
                     </li>
-                    
+                
 
-                    
+                
 
-                    
+                
                     <li>
-                        <a target="_blank" href="https://github.com/chencjfeng">
+                        <a target="_blank"  href="https://github.com/chencjfeng">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
-                    
+                
 
-                    
+                
 
-                    
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; chenJF 2017
-           
-              
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
             </div>
         </div>
     </div>
@@ -344,24 +296,20 @@
 <!-- async load function -->
 <script>
     function async(u, c) {
-        var d = document, t = 'script',
-                o = d.createElement(t),
-                s = d.getElementsByTagName(t)[0];
-        o.src = u;
-        if (c) {
-            o.addEventListener('load', function (e) {
-                c(null, e);
-            }, false);
-        }
-        s.parentNode.insertBefore(o, s);
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
     }
 </script>
 
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if ($('#tag_cloud').length !== 0) {
-        async("http://chencjfeng.github.io/js/jquery.tagcloud.js", function () {
+    if($('#tag_cloud').length !== 0){
+        async("http://chencjfeng.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -373,9 +321,9 @@
 
 <!--fastClick.js -->
 <script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
         var $nav = document.querySelector("nav");
-        if ($nav) FastClick.attach($nav);
+        if($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -388,19 +336,12 @@
 
 <!-- swiftype -->
 <script type="text/javascript">
-    (function (w, d, t, u, n, s, e) {
-        w['SwiftypeObject'] = n;
-        w[n] = w[n] || function () {
-                    (w[n].q = w[n].q || []).push(arguments);
-                };
-        s = d.createElement(t);
-        e = d.getElementsByTagName(t)[0];
-        s.async = 1;
-        s.src = u;
-        e.parentNode.insertBefore(s, e);
-    })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
 
-    _st('install', '', '2.0.0');
+  _st('install','','2.0.0');
 </script>
 
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
