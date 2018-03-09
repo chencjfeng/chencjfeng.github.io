@@ -69,7 +69,7 @@ sidebar-avatar: /images/header.jpg    # use absolute URL
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
-featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+featured-condition-size: 999              # A tag will be featured if the size of it is more than this condition value
 
 # friends
 friends:  # 友链
@@ -171,7 +171,7 @@ search:
   baidu: false # you need to disable other search engines to use Baidu search
 
 
-# archive page title 
+# archive page title
 archive:
     title: 归档
     description: 可以根据归档日期检索所有文件

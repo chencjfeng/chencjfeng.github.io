@@ -3,7 +3,7 @@ title: git pull冲突解决
 date: 2017-11-04 15:04:14
 author: "chenJF"
 tags: git
-categories: 工具
+archives: 工具
 ---
 
 ### 导语：

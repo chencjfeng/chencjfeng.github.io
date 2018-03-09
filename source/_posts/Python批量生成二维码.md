@@ -4,7 +4,7 @@ date: 2017-11-04 14:54:31
 author: "chenJF"
 tags:
     - Python
-categories: Python
+archives: Python
 ---
 # Python2.7 批量生成二维
 
