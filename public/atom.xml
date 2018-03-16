@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chencjfeng.github.io/"/>
-  <updated>2018-03-16T01:21:56.663Z</updated>
+  <updated>2018-03-16T03:26:35.602Z</updated>
   <id>http://chencjfeng.github.io/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件设计师考点内容(三)</title>
+    <link href="http://chencjfeng.github.io/2018/03/16/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9%E5%86%85%E5%AE%B9-%E4%B8%89/"/>
+    <id>http://chencjfeng.github.io/2018/03/16/软件设计师考点内容-三/</id>
+    <published>2018-03-16T03:20:00.000Z</published>
+    <updated>2018-03-16T03:26:35.602Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="软件设计师考点内容分析"><a href="#软件设计师考点内容分析" class="headerlink" title="软件设计师考点内容分析"></a>软件设计师考点内容分析</h1><h3 id="1-VLIW"><a href="#1-VLIW" class="headerlink" title="1.VLIW"></a>1.VLIW</h3><ul><li>VLIW（Very Long Instruction Word），超长指令字。一种非常长的指令组合，它把许多条指令连在一起，增加了运算的速度。<h3 id="2-编译程序、解释程序"><a href="#2-编译程序、解释程序" class="headerlink" title="2.编译程序、解释程序"></a>2.编译程序、解释程序</h3></li><li>编译程序：编译程序的功能是把用高级语言书写的源程序翻译成与之等价的目标程序。编译过程划分为词法分析、语法分析、语义分析、中间代码生成（三种表达形式：语法树、后缀式、三地址代码）、代码优化和目标代码生成6个阶段。目标程序可以独立于源程序运行。</li><li>解释程序：解释程序是一种语言处理程序，在词法、语法和语义分析方面与编译程序的工作原理基本相同，但在允许用户程序时，它是直接执行源程序或源程序的内部形式（中间代码）。因此，解释程序并不产生目标程序，这是它和编译程序的主要区别。<h3 id="3-脚本语言"><a href="#3-脚本语言" class="headerlink" title="3.脚本语言"></a>3.脚本语言</h3>*脚本语言（Script languages，scripting programming languages，scripting languages）是为了缩短传统的编写-编译-链接-运行（edit-compile-link-run）过程而创建的计算机编程语言。此命名起源于一个脚本“screenplay”；每次运行都会使对话框逐字重复。早期的脚本语言经常被称为批处理语言或者工作控制语言。一个脚本通常是解释运行而非编译。<h3 id="4-仓库风格"><a href="#4-仓库风格" class="headerlink" title="4.仓库风格"></a>4.仓库风格</h3><h5 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h5></li><li>①.解决问题的多方法性</li><li>②.具有可更改性和可维护性</li><li>③.有可重用的知识源</li><li>④.支持容错性和健壮性<h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5></li><li>①.测试困难：由于黑板模式的系统中央数据构件来描述系统的体现系统的状态，所以系统的执行没有确定的顺序，其结果的可再现性比较差，难于测试。</li><li>②.不能保证有好的求解方法</li><li>③.效率低</li><li>④.开发成本高</li><li>⑤.缺少对并行机的支持<h5 id="风格："><a href="#风格：" class="headerlink" title="风格："></a>风格：</h5></li><li>①.数据库系统</li><li>②.黑板系统</li><li>③.超文本系统<h3 id="5-测试策略"><a href="#5-测试策略" class="headerlink" title="5.测试策略"></a>5.测试策略</h3><h5 id="①-自顶向下"><a href="#①-自顶向下" class="headerlink" title="①.自顶向下"></a>①.自顶向下</h5></li><li>方法：从主控模块开始，沿着程序控制层次向下移动，逐渐把各模块组合起来。（深度优先或广度优先）</li><li>优点：可以在早期实现软件的一个完整功能。</li><li>缺点：没有底层返回来真实数据流。<h5 id="②-自底向上"><a href="#②-自底向上" class="headerlink" title="②.自底向上"></a>②.自底向上</h5></li><li>方法：从软件结构最底层的模块开始组装和测试，不需要桩模块。</li><li>优点：可以并行集成，对被测模块可测性要求比自顶向下集成策略低。</li><li>缺点：驱动模块开发量大，整体设计的错误发现较晚，集成到顶层时将变得越来越复杂。<h5 id="③-三明治"><a href="#③-三明治" class="headerlink" title="③.三明治"></a>③.三明治</h5></li><li>方法：混合增量式测试策略，综合了自顶向下和自底向上两种集成方法。</li><li>优点：桩模块和驱动模块的开发工作都比较小。</li><li>缺点：增加了缺陷的定位难度，目标层在集成前测试不充分。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;软件设计师考点内容分析&quot;&gt;&lt;a href=&quot;#软件设计师考点内容分析&quot; class=&quot;headerlink&quot; title=&quot;软件设计师考点内容分析&quot;&gt;&lt;/a&gt;软件设计师考点内容分析&lt;/h1&gt;&lt;h3 id=&quot;1-VLIW&quot;&gt;&lt;a href=&quot;#1-VLIW&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="软件设计师" scheme="http://chencjfeng.github.io/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件设计师考点内容(二)</title>
+    <link href="http://chencjfeng.github.io/2018/03/16/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%80%83%E7%82%B9%E5%86%85%E5%AE%B9-%E4%BA%8C/"/>
+    <id>http://chencjfeng.github.io/2018/03/16/软件设计师考点内容-二/</id>
+    <published>2018-03-16T03:00:00.000Z</published>
+    <updated>2018-03-16T03:26:15.741Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="软件设计师考点内容分析"><a href="#软件设计师考点内容分析" class="headerlink" title="软件设计师考点内容分析"></a>软件设计师考点内容分析</h1><h3 id="1-软件质量特性"><a href="#1-软件质量特性" class="headerlink" title="1.软件质量特性"></a>1.软件质量特性</h3><ul><li>功能性：适合性、准确性、互操作性、保密安全性、功能依从性。</li><li>可靠性：成熟性、容错性、易恢复性、可靠依从性。</li><li>易用性：易理解性、易操作性、易学性、吸引性、易用依从性。</li><li>效率：时间特性、资源利用、效率依从性。</li><li>维护性：易分析性、易改变性、稳定性、易测试性、维护依从性。</li><li>可移植性：适用性、易安装性、共存性、易替换性、可移植性的依从性。</li></ul><h3 id="2-环形复杂度计算"><a href="#2-环形复杂度计算" class="headerlink" title="2.环形复杂度计算"></a>2.环形复杂度计算</h3><ul><li>环形复杂度V(G) = E - N + 2<br>(E是流图中的边的条数，N是节点数)</li></ul><h3 id="3-内聚类型"><a href="#3-内聚类型" class="headerlink" title="3.内聚类型"></a>3.内聚类型</h3><ul><li>① 偶然内聚：模块中的代码无法定义其不同功能的调用。但它使该模块能执行不同的功能，这种模块称为巧合强度模块。<ul><li>② 逻辑内聚：这种模块把几种相关的功能组合在一起， 每次被调用时，由传送给模块参数来确定该模块应完成哪一种功能</li><li>③ 时间内聚：把需要同时执行的动作组合在一起形成的模块为时间内聚模块。</li><li>④ 过程内聚：构件或者操作的组合方式是，允许在调用前面的构件或操作之后，马上调用后面的构件或操作，即使两者之间没有数据进行传递。</li><li>⑤ 通信内聚：指模块内所有处理元素都在同一个数据结构上操作（有时称之为信息内聚），或者指各处理使用相同的输入数据或者产生相同的输出数据。</li><li>⑥ 顺序内聚：指一个模块中各个处理元素都密切相关于同一功能且必须顺序执行，前一功能元素输出就是下一功能元素的输入。即一个模块完成多个功能，这些模块又必须顺序执行。</li><li>⑦ 功能内聚：这是最强的内聚，指模块内所有元素共同完成一个功能，联系紧密，缺一不可。<h3 id="4-UML状态图的转换-transition-的五要素"><a href="#4-UML状态图的转换-transition-的五要素" class="headerlink" title="4.UML状态图的转换(transition)的五要素"></a>4.UML状态图的转换(transition)的五要素</h3></li></ul></li><li>源状态：即受转换影响的状态。</li><li>目标状态：当转换完成后对象的状态。</li><li>触发事件：用来为转换定义一个事件，包括调用、改变、信号、时间四类事件。</li><li>监护条件：布尔表达式，决定是否激活转换。</li><li>动作：转换激活时的操作。<h3 id="5-策略模式"><a href="#5-策略模式" class="headerlink" title="5.策略模式"></a>5.策略模式</h3>策略模式定义了一系列的算法，并将每一个算法封装起来，而且使它们还可以互相替换。策略模式让算法独立于它的客户而独立变换。<br>应用场景：</li><li>多个类只区别在表现行为不同，可以使用Strategy模式，在运行时动态选择具体要执行的行为。</li><li>需要在不同情况下使用不同的策略(算法)，或者策略还可能在未来用其它方式来实现。</li><li>对客户隐藏具体策略(算法)的实现细节，彼此完全独立。<h3 id="6-生成器模式"><a href="#6-生成器模式" class="headerlink" title="6.生成器模式"></a>6.生成器模式</h3>生成器模式将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。<br>适用范围：</li><li>当创建复杂对象的算法应该独立于该对象的组成部分以及它们的装配方式时。</li><li>当构造过程必须允许被构造的对象有不同表示时。<h3 id="7-乔姆斯基（chomsky）文法分类"><a href="#7-乔姆斯基（chomsky）文法分类" class="headerlink" title="7.乔姆斯基（chomsky）文法分类"></a>7.乔姆斯基（chomsky）文法分类</h3></li><li>0型文法(短语结构文法)：0型文法的能力相当于图灵机(Turing)。或者说，任何0型文语言都是递归可枚举的，反之，递归可枚举集必定是一个0型语言。0型文法是这几类文法中，限制最少的一个，所以我们在试题中见到的,至少是0型文法。</li><li>1型文法(上下文有关文法)：此文法对应于线性有界自动机。它是在0型文法的基础上每一个α→β,都有|β|≥|α|。这里的|β|表示的是β的长度。</li><li>2型文法(上下文无关文法)：此文发对应于下推自动机，形式语言论中一种重要的变换文法，用来描述上下文无关语言。由于程序设计语言的语法基本上都是上下文无关文法，因此应用十分广泛。2型文法是在1型文法的基础上,再满足：每一个α→β都有α是非终结符。如A-&gt;Ba,符合2型文法要求。</li><li>3型文法(正规文法)：此文发对应于有限状态自动机。它是在2型文法的基础上满足:A→α|αB（右线性）或A→α|Bα（左线性）。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;软件设计师考点内容分析&quot;&gt;&lt;a href=&quot;#软件设计师考点内容分析&quot; class=&quot;headerlink&quot; title=&quot;软件设计师考点内容分析&quot;&gt;&lt;/a&gt;软件设计师考点内容分析&lt;/h1&gt;&lt;h3 id=&quot;1-软件质量特性&quot;&gt;&lt;a href=&quot;#1-软件质量特性&quot;
+      
+    
+    </summary>
+    
+    
+      <category term="软件设计师" scheme="http://chencjfeng.github.io/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/"/>
+    
+  </entry>
   
   <entry>
     <title>git pull冲突解决</title>
