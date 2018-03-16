@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="陈剑锋在 Github 上的个人博客">
+    <meta name="keyword" content="">
+    <!---->
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="chenJF" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        Python批量生成二维码｜chenJF&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://chencjfeng.github.io/2017/11/04/Python批量生成二维码/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    chenJF
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/archives/">归档</a>
+                        </li>
+							
+						
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">标签</a>
+                        </li>
+							
+						
+                    
+
+					
+
+                    <li>
+                        <a href='javascript:(function(){function c(){var e=document.createElement("link");e.setAttribute("type","text/css");e.setAttribute("rel","stylesheet");e.setAttribute("href",f);e.setAttribute("class",l);document.body.appendChild(e)}function h(){var e=document.getElementsByClassName(l);for(var t=0;t<e.length;t++){document.body.removeChild(e[t])}}function p(){var e=document.createElement("div");e.setAttribute("class",a);document.body.appendChild(e);setTimeout(function(){document.body.removeChild(e)},100)}function d(e){return{height:e.offsetHeight,width:e.offsetWidth}}function v(i){var s=d(i);return s.height>e&&s.height<n&&s.width>t&&s.width<r}function m(e){var t=e;var n=0;while(!!t){n+=t.offsetTop;t=t.offsetParent}return n}function g(){var e=document.documentElement;if(!!window.innerWidth){return window.innerHeight}else{if(e&&!isNaN(e.clientHeight)){return e.clientHeight}}return 0}function y(){if(window.pageYOffset){return window.pageYOffset}return Math.max(document.documentElement.scrollTop,document.body.scrollTop)}function E(e){var t=m(e);return t>=w&&t<=b+w}function S(){var e=document.createElement("audio");e.setAttribute("class",l);e.src=i;e.loop=false;e.addEventListener("canplay",function(){setTimeout(function(){x(k)},500);setTimeout(function(){N();p();for(var e=0;e<O.length;e++){T(O[e])}},15500)},true);e.addEventListener("ended",function(){N();h()},true);e.innerHTML=" <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";document.body.appendChild(e);e.play()}function x(e){e.className+=" "+s+" "+o}function T(e){e.className+=" "+s+" "+u[Math.floor(Math.random()*u.length)]}function N(){var e=document.getElementsByClassName(s);var t=new RegExp("\\b"+s+"\\b");for(var n=0;n<e.length;){e[n].className=e[n].className.replace(t,"")}}var e=30;var t=30;var n=350;var r=350;var i="http://oq32hakib.bkt.clouddn.com/hight.mp3";var s="mw-harlem_shake_me";var o="im_first";var u=["im_drunk","im_baked","im_trippin","im_blown"];var a="mw-strobe_light";var f="//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";var l="mw_added_css";var b=g();var w=y();var C=document.getElementsByTagName("*");var k=null;for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){if(E(A)){k=A;break}}}if(A===null){console.warn("Could not find a node of the right size. Please try a different page.");return}c();S();var O=[];for(var L=0;L<C.length;L++){var A=C[L];if(v(A)){O.push(A)}}})(); '>High模式</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="/images/blog-bg-black-run.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('/images/blog-bg-black-run.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>Python批量生成二维码</h1>
+                    
+                    <span class="meta">
+                         作者 chenJF
+                        <span>
+                          日期 2017-11-04
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Python"
+                           title="Python">Python</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Python批量生成二维码
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h1 id="Python2-7-批量生成二维"><a href="#Python2-7-批量生成二维" class="headerlink" title="Python2.7 批量生成二维"></a>Python2.7 批量生成二维</h1><h2 id="导语："><a href="#导语：" class="headerlink" title="导语："></a>导语：</h2><blockquote>
+<p>本文针对mac电脑利用Python2.7脚本批量生成二维码，由于Python生成二维码利用了qrcode和image库，需要先用pip安装这两个库。这里顺便说了下pip的安装。</p>
+</blockquote>
+<h3 id="1-pip的安装"><a href="#1-pip的安装" class="headerlink" title="1.pip的安装"></a>1.pip的安装</h3><ul>
+<li><p>用命令行安装pip</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">sudo easy_install pip</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查是否安装成功，只要不是not found pip，则安装成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip help</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><br></p>
+<h3 id="2-安装qrcode和image库"><a href="#2-安装qrcode和image库" class="headerlink" title="2.安装qrcode和image库"></a>2.安装qrcode和image库</h3><ul>
+<li><p>安装命令</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#安装失败可以加sudo安装</div><div class="line">pip install qrcode</div><div class="line">pip install image</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查是否安装成功,安装成功会有相应的版本信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">pip show qrcode</div><div class="line">pip show image</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装成功显示界面信息</p>
+</li>
+<li><p><img src="http://upload-images.jianshu.io/upload_images/4970496-ce568913bd5e15a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="python-qrcode.png"><br><br></p>
+<h3 id="3-示例代码"><a href="#3-示例代码" class="headerlink" title="3.示例代码"></a>3.示例代码</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line"># 导入qrcode库</div><div class="line">import qrcode</div><div class="line"></div><div class="line">#生成一张二维码图片，url二维码的内容，name保存二维码图片的名字</div><div class="line">def createOneQR(url,name):</div><div class="line">qr=qrcode.QRCode(version = 2,</div><div class="line">error_correction = qrcode.constants.ERROR_CORRECT_L, #容错样式</div><div class="line">box_size=10,   #每个格子的像素</div><div class="line">border=1)      #边框宽度</div><div class="line">qr.add_data(url)</div><div class="line">qr.make(fit=True)</div><div class="line">img = qr.make_image()</div><div class="line">img.resize((140, 140)).save(name)   #保存为140*140的图片</div><div class="line"></div><div class="line"></div><div class="line">#根据文档批量生成二维码</div><div class="line">def getQR():</div><div class="line">num = 0</div><div class="line">#遍历文档每行内容生成二维码</div><div class="line">for line in open(&quot;license-for-card.txt&quot;):</div><div class="line">imageName = &quot;license&quot;+str(num)+&quot;.png&quot;</div><div class="line">createOneQR(line,imageName)</div><div class="line">num += 1</div><div class="line"></div><div class="line">getQR()</div></pre></td></tr></table></figure>
+</li>
+<li><p>参数 version 表示生成二维码的尺寸大小，取值范围是 1 至 40，最小尺寸 1 会生成 21 <em> 21 的二维码，version 每增加 1，生成的二维码就会添加 4 尺寸，例如 version 是 2，则生成 25 </em> 25 的二维码。</p>
+</li>
+<li><p>参数 error_correction 指定二维码的容错系数，分别有以下4个系数：</p>
+</li>
+<li>ERROR_CORRECT_L: 7%的字码可被容错</li>
+<li>ERROR_CORRECT_M: 15%的字码可被容错</li>
+<li>ERROR_CORRECT_Q: 25%的字码可被容错</li>
+<li>ERROR_CORRECT_H: 30%的字码可被容错</li>
+<li>参数 box_size 表示二维码里每个格子的像素大小。</li>
+<li>参数 border 表示边框的格子厚度是多少（默认是4）。</li>
+</ul>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/11/04/git-pull冲突解决/" data-toggle="tooltip" data-placement="top"
+                           title="git pull冲突解决">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/11/04/软件设计师考点内容-一/" data-toggle="tooltip" data-placement="top"
+                           title="软件设计师考点内容(一)">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Python2-7-批量生成二维"><span class="toc-text">Python2.7 批量生成二维</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#导语："><span class="toc-text">导语：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-pip的安装"><span class="toc-text">1.pip的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-安装qrcode和image库"><span class="toc-text">2.安装qrcode和image库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-示例代码"><span class="toc-text">3.示例代码</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Python"
+                           title="Python">Python</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                    
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/ChenJF-X贱">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/chencjfeng">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; chenJF 2018
+           
+              
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+                o = d.createElement(t),
+                s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function (e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("http://chencjfeng.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+    (function (w, d, t, u, n, s, e) {
+        w['SwiftypeObject'] = n;
+        w[n] = w[n] || function () {
+                    (w[n].q = w[n].q || []).push(arguments);
+                };
+        s = d.createElement(t);
+        e = d.getElementsByTagName(t)[0];
+        s.async = 1;
+        s.src = u;
+        e.parentNode.insertBefore(s, e);
+    })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
+
+    _st('install', '', '2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="/images/header.jpg">
+</body>
+
+</html>
